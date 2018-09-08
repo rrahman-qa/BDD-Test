@@ -1,10 +1,10 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import utilities.Calculator;
 
 public class StepDefinitions {
     int number1;
@@ -23,6 +23,6 @@ public class StepDefinitions {
 
     @Then("^The result is (\\d+)$")
     public void theResultIs(int arg0)  {
-        Assert.assertEquals(result, arg0);
+        Assert.assertEquals(Calculator.add(number1, number2), arg0);
     }
 }
