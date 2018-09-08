@@ -23,6 +23,6 @@ public class StepDefinitions {
 
     @Then("^The result is (\\d+)$")
     public void theResultIs(int arg0)  {
-        Assert.assertEquals(arg0, result);
+        Assert.assertEquals(result, arg0);
     }
 }
