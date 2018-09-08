@@ -22,7 +22,7 @@ public class StepDefinitions {
     }
 
     @Then("^The result is (\\d+)$")
-    public void theResultIs(int arg0)  {
-        Assert.assertEquals(Calculator.add(number1, number2), arg0);
+    public void theResultIs(int result)  {
+        Assert.assertEquals(result, Calculator.add(number1, number2));
     }
 }
